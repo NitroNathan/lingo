@@ -488,9 +488,14 @@ var checkWoord = document.getElementById("checkWoord");
 var button = document.getElementById("buttonCheck");
     button.setAttribute("onclick", "checkWord(word)");
 
+var first = woord.charAt(0);
+document.getElementById('r1v0').innerHTML=first;
+
+
+
 function checkWord() {
     raadWord = raadWord.value.split(""); // het hele woord wordt gesplitst, hierdoor krijg je de letters apart
-    checkWoord = checkWoord.value.split("");
+    checkWoord = checkWoord.value.split("")
     console.log(raadWord);
       console.log(checkWoord);
 
