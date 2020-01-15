@@ -1,0 +1,34 @@
+body{
+	background-color: #33A3DB;
+}
+.rows{
+    margin: 0 auto;
+    width: 350px;
+    background-color: black;
+}
+.rows>div{
+    border: 1px solid white;
+    color: white;
+    display: inline-block;
+    width: 50px;
+    height: 42px;
+    margin: 10px 2px 10px 2px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+#r1v0{
+    margin-left: 25px;
+}
+#r2v0{
+    margin-left: 25px;
+}
+#r3v0{
+    margin-left: 25px;
+}
+#r4v0{
+    margin-left: 25px;
+}
+#r5v0{
+    margin-left: 25px;
+}

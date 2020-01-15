@@ -478,3 +478,34 @@ var words = [
 	"zeker",
 	"zever",
 	"zeeen"];
+
+var random = Math.floor(Math.random() * 478) + 1;
+var woord = words[random];
+console.log(woord);
+
+var raadWord = document.getElementById("word");
+var checkWoord = document.getElementById("checkWoord");
+var button = document.getElementById("buttonCheck");
+    button.setAttribute("onclick", "checkWord(word)");
+
+function checkWord() {
+    raadWord = raadWord.value.split(""); // het hele woord wordt gesplitst, hierdoor krijg je de letters apart
+    checkWoord = checkWoord.value.split("");
+    console.log(raadWord);
+      console.log(checkWoord);
+
+    for (i = 0; i < raadWord.length; i++) {
+        // er wordt gekeken of letter.value gelijk is aan de letters in letters[i]
+        if (checkWoord[i] ==raadWord[i]){
+          document.getElementById("letter_" +(i + 1)).innerHTML=raadWord[i];
+        document.getElementById("letter_" +(i + 1)).style.backgroundColor="green";
+        raadWord[i]= "*";
+        }else if (raadWord.indexOf(checkWoord[i])>-1){
+          document.getElementById("letter_" +(i + 1)).innerHTML=raadWord[i]
+        document.getElementById("letter_" +(i + 1)).style.backgroundColor="yellow";
+        checkWoord[i]= "*";
+        }
+
+    }
+console.log(raadWord);
+}
